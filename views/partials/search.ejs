@@ -1,0 +1,70 @@
+<div class="container mt-3">
+<div class="d-flex flex-row justify-content-between">
+    <div class="btn-group">
+        <button class="btn btn-secondary dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Search by continent...
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/parks/continent/<%= 'Africa'%>">Africa</a></li>
+          <li><a class="dropdown-item" href="/parks/continent/<%= 'Asia'%>">Asia</a></li>
+          <li><a class="dropdown-item" href="/parks/continent/<%= 'Europe'%>">Europe</a></li>
+          <li><a class="dropdown-item" href="/parks/continent/<%= 'North-America'%>">North America</a></li>
+          <li><a class="dropdown-item" href="/parks/continent/<%= 'South-America'%>">South America</a></li>
+          <li><a class="dropdown-item" href="/parks/continent/<%= 'Australia'%>">Australia</a></li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Search by country...
+        </button>
+        <ul class="dropdown-menu">
+        <% for(let park of parks) { %>
+          <li><a class="dropdown-item" href="/parks/country/<%= park.country%>"><%=park.country%></a></li>
+        <% } %>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Search by attractions...
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/parks/attractions/<%= 'forest' %>">Forest</a></li>
+            <li><a class="dropdown-item" href="/parks/attractions/<%= 'mountain' %>">Mountain</a></li>
+            <li><a class="dropdown-item" href="/parks/attractions/<%= 'waterfall' %>">Waterfall</a></li>
+            <li><a class="dropdown-item" href="/parks/attractions/<%= 'lakes' %>">Lakes</a></li>
+            <li><a class="dropdown-item" href="/parks/attractions/<%= 'rivers' %>">Rivers</a></li>
+            <li><a class="dropdown-item" href="/parks/attractions/<%= 'fields' %>">Fields</a></li>
+            <li><a class="dropdown-item" href="/parks/attractions/<%= 'island' %>">Island</a></li>
+            <li><a class="dropdown-item" href="/parks/attractions/<%= 'castle' %>">Castle</a></li>
+            <li><a class="dropdown-item" href="/parks/attractions/<%= 'buildings' %>">Antient buildings</a></li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Search by activities...
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/parks/activities/<%= 'birdwatching' %>">Bird watching</a></li>
+            <li><a class="dropdown-item" href="/parks/activities/<%= 'climbing' %>">Climbing</a></li>
+            <li><a class="dropdown-item" href="/parks/activities/<%= 'hiking' %>">Hiking</a></li>
+            <li><a class="dropdown-item" href="/parks/activities/<%= 'fishing' %>">Fishing</a></li>
+            <li><a class="dropdown-item" href="/parks/activities/<%= 'kayaking' %>">Kayaking</a></li>
+            <li><a class="dropdown-item" href="/parks/activities/<%= 'canopywalk' %>">Canopy walk</a></li>
+            <li><a class="dropdown-item" href="/parks/activities/<%= 'cycling' %>">Cycling</a></li>
+            <li><a class="dropdown-item" href="/parks/activities/<%= 'horse' %>">Horseback riding</a></li>
+            <li><a class="dropdown-item" href="/parks/activities/<%= 'stargazing' %>">Stargazing</a></li>
+            <li><a class="dropdown-item" href="/parks/activities/<%= 'swimming' %>">Swimming</a></li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Search by trail difficulty...
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/parks/trails/<%= 'easy' %>">Easy</a></li>
+            <li><a class="dropdown-item" href="/parks/trails/<%= 'moderate' %>">Moderate</a></li>
+            <li><a class="dropdown-item" href="/parks/trails/<%= 'intense' %>">Intense</a></li>
+        </ul>
+    </div>
+</div>
+</div>
