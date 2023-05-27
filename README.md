@@ -1,6 +1,6 @@
-This project is about showing the national parks around the world with descriptions, pictures, services, possible activities and so on.
+This project is about showing the national parks around the world with descriptions, pictures, services, possible activities and so on.<br />
 The pictures are stored in Cloudinary and the data are stored in MongoDB Atlas.
-Visitors can search for parks according to different conditions, such as continent, country, landscape, activity, difficulty or own criteria.
+Visitors can search for parks according to different conditions, such as continent, country, landscape, activity, difficulty or own criteria.<br />
 Logged in users can hold feedback and rate the parks (or edit and delete their ratings).
 Only admin user can add new parks to the database.
 
@@ -21,9 +21,3 @@ Used software and plugins:
 - Passport-Local Mongoose: a Mongoose plugin that simplifies building username and password login with Passport.
 - sanitize-html: a simple HTML sanitizer, allows you to specify the tags you want to permit, and the permitted attributes for each of those tags
 - joi: data validator for JavaScript
-
-
-Color palette:
-navbar background: #e2fadb
-text color: #5f634f
-other green color: #dbefbc
