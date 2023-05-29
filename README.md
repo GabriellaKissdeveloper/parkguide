@@ -4,6 +4,7 @@ Visitors can search for parks according to different conditions, such as contine
 Logged in users can hold feedback and rate the parks (or edit and delete their ratings).
 Only admin user can add new parks to the database.
 
+Deployed app: https://afternoon-plateau-47271.herokuapp.com/
 
 Used software and plugins:
 - Node.js, JavaScript, Express, nodemon

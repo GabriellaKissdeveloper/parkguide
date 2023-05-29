@@ -36,6 +36,17 @@
     border-color: #5f634f !important;
 }
 
+.btn-outline-success {
+    color: #5f634f !important;
+    border-color: #5f634f !important;
+}
+
+.btn-outline-success:hover, .btn-outline-success:active {
+    background-color: #5f634f !important;
+    border-color: #5f634f !important;
+    color: #e2fadb !important;
+}
+
 .btn-reset, .btn-reset:hover {
     background-color: #e2fadb;
     color: #5f634f;
@@ -62,13 +73,13 @@ select:focus {
     box-shadow: 0 0 5px #5f634f !important;
 }
 
-select option:checked, select option:hover {
+select option:checked, select option:hover, select option:focus {
     --webkit-appearance: none !important;
     background-color: #5f634f !important;
     color: white !important;
 }
 
-.form-select option:checked, .form-select option:hover {
+.form-select option:checked, .form-select option:hover, .form-select option:focus {
     --webkit-appearance: none !important;
     background-color: #5f634f !important;
     color: white !important;

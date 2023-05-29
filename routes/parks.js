@@ -21,7 +21,10 @@ router
   );
 
 router.get("/new", isLoggedIn, isAdmin, parks.renderNewForm);
+router.delete("/:id", isLoggedIn, isAdmin, catchAsync(parks.deletePark));
+router.put('/:id', isLoggedIn, isAdmin, upload.array('image'), validatePark, catchAsync(parks.updatePark));
 router.route("/:id").get(catchAsync(parks.showPark));
+router.get('/:id/edit', isLoggedIn, isAdmin, catchAsync(parks.renderEditForm))
 router
   .route("/continent/:continent")
   .get(catchAsync(parks.showParkByContinent));
@@ -29,5 +32,6 @@ router.route("/country/:country").get(catchAsync(parks.showParkByCountry));
 router.route("/trails/:difficulty").get(catchAsync(parks.showParkByDifficulty));
 router.route("/attractions/:attraction").get(catchAsync(parks.showParkByAttractions));
 router.route("/activities/:activity").get(catchAsync(parks.showParkByActivities));
+
 
 module.exports = router;

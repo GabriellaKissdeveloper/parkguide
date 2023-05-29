@@ -95,3 +95,30 @@ module.exports.showParkByDifficulty = async (req, res) => {
 
   res.render("parks/trails", { parks, difficulty });
 };
+
+module.exports.renderEditForm = async (req, res) => {
+  const { id } = req.params;
+    const park = await Park.findById(id)
+    if (!park) {
+        req.flash('error', 'Cannot find that park!');
+        return res.redirect('/parks');
+    }
+    res.render('parks/edit', { park });
+};
+
+module.exports.deletePark = async (req, res) => {
+  const { id } = req.params;
+  await Park.findByIdAndDelete(id);
+  req.flash('success', 'Successfully deleted this park')
+  res.redirect('/parks');
+}
+
+module.exports.updatePark = async (req, res) => {
+  const { id } = req.params;
+  const park = await Park.findByIdAndUpdate(id, { ...req.body.park });
+  const imgs = req.files.map(f => ({ url: f.path, filename: f.filename }));
+  park.images.push(...imgs);
+  await park.save();
+  req.flash('success', 'Successfully updated the national park!');
+  res.redirect(`/parks/${park._id}`)
+}
