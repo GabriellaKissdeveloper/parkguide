@@ -20,7 +20,7 @@
             <div class="carousel-inner" role="listbox">
                 <% parks.forEach((park, i) => { %>
                 <div class="carousel-item <%= i === 0 ? 'active' : ''%>">
-                    <div class="col-4">
+                    <div class="col-md-6 col-lg-4">
                     <div class="card mx-1" style="height: 500px;">
                         <img class="card-img-top" height="250px" alt="park" src="<%=park.images[0].url%>">
                         <div class="card-body">
@@ -54,7 +54,7 @@
     <br>
     <div class="row">
     <% visitedParks.forEach((visited) => { %>
-    <div class="col-4 text-center" style="height: 250px;">
+    <div class="col-lg-4 col-md-6 text-center" id="visited" style="height: 250px;">
         <div class="card text-white">
         <img src="<%=visited.images[0].url%>" class="card-img " alt="park">
         <div class="card-img-overlay" style="background: linear-gradient(to bottom, #5a5a5a, transparent 50%) ">
