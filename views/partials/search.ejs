@@ -18,8 +18,12 @@
           Search by country...
         </button>
         <ul class="dropdown-menu">
-        <% for(let park of parks) { %>
-          <li><a class="dropdown-item" href="/parks/country/<%= park.country%>"><%=park.country%></a></li>
+        <% let countries = new Set() 
+          for(let park of parks) { 
+            countries.add(park.country)
+          }
+          for (let country of countries) { %>
+          <li><a class="dropdown-item" href="/parks/country/<%= country%>"><%=country%></a></li>
         <% } %>
         </ul>
     </div>
